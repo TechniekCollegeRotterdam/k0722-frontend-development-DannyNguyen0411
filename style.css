@@ -1,0 +1,24 @@
+/*This is the navbar*/
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #00008b
+}
+
+
+/*This is how for the title like <h1>*/
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+/*We need the body for lay-out and color*/
+body{
+    background-color: #A9A9A9;
+}
+
+/*This is for the responsive image*/
+img{
+    max-width: 100;
+    height: auto;
+}
