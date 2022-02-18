@@ -2,7 +2,7 @@
 nav {
     display: flex;
     justify-content: center;
-    background-color: #00008b
+    background-color: #A9A9A9
 }
 
 
@@ -14,11 +14,89 @@ h1 {
 
 /*We need the body for lay-out and color*/
 body{
-    background-color: #A9A9A9;
+    background-color: #ADD8E6;
+    color: #00008b;
+
 }
 
 /*This is for the responsive image*/
 img{
     max-width: 100;
     height: auto;
+    position: relative;
 }
+
+/*This is for the image position*/
+img.left{
+   float: left;
+   margin: 0.5em 1em 1em 0;
+   border: 1px solid #999;
+   clear: left;
+}
+
+img.right{
+    float: right;
+    margin: 0.5em 1em 1em 0;
+    border: 1px solid #999;
+    clear: right;
+}
+
+img.center{
+    float: center;
+    clear: center;
+}
+
+img.left2{
+    float: left;
+    margin: 0.5em 1em 1em 0;
+    border: 1px solid #999;
+    clear: left;
+ }
+ 
+ img.right2{
+     float: right;
+     margin: 0.5em 1em 1em 0;
+     border: 1px solid #999;
+     clear: right;
+ }
+
+
+/*This is for the title or text on the center of the website*/
+.positionl{
+    display: grid;
+    justify-content: left;
+}
+
+.positionr{
+    display: grid;
+    justify-content: right;
+}
+
+.positionc{
+    display: grid;
+    justify-content: center;
+}
+
+.positioncleft{
+    display: grid;
+    margin: 0.5em 1em 1em 0;
+    justify-content: center;
+}
+
+.positioncright{
+    display: grid;
+    margin: 0.5em 1em 1em 0;
+    justify-content: center;
+}
+
+
+@media screen and (min-width: 1200px){
+body{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+}
+
+
+
+
