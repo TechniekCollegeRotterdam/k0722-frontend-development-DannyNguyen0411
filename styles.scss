@@ -1,0 +1,56 @@
+@import "_partial.scss";
+
+/*This are color*/
+$primary: rgb(0, 120, 201);
+$width: 100vw;
+$text: yellow;
+$resultcolor: purple;
+
+
+nav {
+  width: $width;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; 
+       padding: 10px;}
+
+  a {
+    padding: 6px 12px;
+    color: $text;
+    display: inline;
+  }
+
+  a:hover{
+    color: $resultcolor;
+    animation-name: colorchange;
+    animation-duration: 0.5s;
+  }
+
+  @keyframes colorchange {
+    from {color: $text;}
+    to {color: $resultcolor;}
+  }
+  
+
+  
+}
+
+body{
+  background-color: $primary;
+  width: $width;
+
+  section{
+
+    article{
+
+      
+    }
+  }
+}
+
+
+

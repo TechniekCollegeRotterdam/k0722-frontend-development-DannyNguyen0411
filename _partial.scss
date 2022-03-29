@@ -1,0 +1,36 @@
+// You can create partial Sass files that contain little snippets of CSS that you can include in other Sass files. 
+$primary: rgb(0, 120, 201);
+$width: 100vw;
+$text: yellow;
+$resultcolor: purple;
+
+
+nav {
+  width: $width;
+  background-color: $primary;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; 
+       padding: 10px;}
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    text-decoration-color: $text;
+  }
+
+  
+}
+
+body{
+  background-color: $primary;
+  width: $width;
+}
+
+
+
