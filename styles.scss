@@ -1,53 +1,16 @@
 @import "_partial.scss";
 
 /*This are color*/
-$primary: #A9A9A9;
+$navcolor: #A9A9A9;
 $main: #ADD8E6;
 $sub: #00008b;
 $width: 100vw;
+$widthnav: 100%;
 $text: white;
 $resultcolor: purple;
+$marginfooter: 200vw;
 
-
-nav {
-  background-color: $primary;
-  width: $width;
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    .navigation-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-  }
-  }
-
-  li { display: inline-block; 
-       padding: 10px;}
-
-  a {
-    padding: 6px 12px;
-    color: $text;
-    display: inline;
-  }
-
-  a:hover{
-    color: $resultcolor;
-    animation-name: colorchange;
-  }
-
-  @keyframes colorchange {
-    from {color: $text;}
-    to {color: $resultcolor;}
-  }
-  
-
-  
-}
-
-body{
+body {
   font-family: sans-serif;
   background-color: $main;
   color: $sub;
@@ -55,28 +18,88 @@ body{
   display: grid;
   grid-template-columns: 40% auto;
   grid-template-rows: 60px 60px;
-  grid-template-areas: 
-  "hd hd"
-  "main main"
-  "footer footer";
+  grid-template-areas:
+    "hd hd"
+    "main main"
+    "footer footer";
+    
 
-header,
-main,
-footer {
+  header,
+  main,
+  footer {
     padding: 16px;
     text-align: center;
-}
-  
-  
+  }
 
-  section{
+header {
+  grid-area: hd;
 
-    article{
+  nav {
+    padding: 10px;
+    position: fixed;
+    background-color: $navcolor;
+    width: $widthnav;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      .navigation-item {
+        display: inline-block;
+        padding: 10px;
+
+        a {
+          text-decoration: none;
+          color: $text;
+          justify-content: space-between;
+          align-items: center;
+        }
 
 
+        a:hover,
+        a:active {
+          color: $sub;
+          color: $resultcolor;
+          animation-name: colorchange;
+          @keyframes colorchange {
+            from {
+              color: $text;
+            }
+          
+            to {
+              color: $resultcolor;
+            }
+          }
+        }
+      }
     }
   }
 }
 
 
+  main {
+    grid-area: main;
 
+    section {
+
+      article {}
+    }
+  }
+
+
+footer {
+  padding: 0;
+  margin-top: 100vw;
+  position: fixed;
+  grid-area: footer;
+  background: black;
+width: $width;
+
+
+}
+}
