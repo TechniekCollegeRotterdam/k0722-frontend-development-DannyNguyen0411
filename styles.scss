@@ -1,18 +1,27 @@
 @import "_partial.scss";
 
 /*This are color*/
-$primary: rgb(0, 120, 201);
+$primary: #A9A9A9;
+$main: #ADD8E6;
+$sub: #00008b;
 $width: 100vw;
-$text: yellow;
+$text: white;
 $resultcolor: purple;
 
 
 nav {
+  background-color: $primary;
   width: $width;
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    .navigation-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+  }
   }
 
   li { display: inline-block; 
@@ -27,7 +36,6 @@ nav {
   a:hover{
     color: $resultcolor;
     animation-name: colorchange;
-    animation-duration: 0.5s;
   }
 
   @keyframes colorchange {
@@ -40,14 +48,32 @@ nav {
 }
 
 body{
-  background-color: $primary;
-  width: $width;
+  font-family: sans-serif;
+  background-color: $main;
+  color: $sub;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 40% auto;
+  grid-template-rows: 60px 60px;
+  grid-template-areas: 
+  "hd hd"
+  "main main"
+  "footer footer";
+
+header,
+main,
+footer {
+    padding: 16px;
+    text-align: center;
+}
+  
+  
 
   section{
 
     article{
 
-      
+
     }
   }
 }
