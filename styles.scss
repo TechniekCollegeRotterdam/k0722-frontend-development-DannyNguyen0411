@@ -1,19 +1,32 @@
 @import "_partial.scss";
 
-/*This are color*/
-$navcolor: #A9A9A9;
+
+/*This are the main colors*/
+
+$friend: #A9A9A9;
 $main: #ADD8E6;
 $sub: #00008b;
-$width: 100vw;
+
+/*This is for the nav*/
 $widthnav: 100%;
+
+/*This is for the others*/
+$width: 100vw;
 $text: white;
 $resultcolor: purple;
+
+/*This is for the footer*/
 $marginfooter: 200vw;
+$marginheight1200: 100px;
+$marginheight600: 125px;
+$widthfooter: 100vw;
 
 body {
+/*This is for the main of the body*/
   font-family: sans-serif;
   background-color: $main;
   color: $sub;
+  padding: 0;
   margin: 0;
   display: grid;
   grid-template-columns: 40% auto;
@@ -27,7 +40,6 @@ body {
   header,
   main,
   footer {
-    padding: 16px;
     text-align: center;
   }
 
@@ -37,7 +49,7 @@ header {
   nav {
     padding: 10px;
     position: fixed;
-    background-color: $navcolor;
+    background-color: $friend;
     width: $widthnav;
 
     ul {
@@ -86,20 +98,39 @@ header {
     grid-area: main;
 
     section {
+      
 
-      article {}
+      article {
+        
+      }
     }
   }
 
+  footer{
+    display: block;
+    margin-top: 200vw;
+    padding: 0;
+    position: relative;
+    width: $widthfooter;
+    background: black;  
+    grid-area: footer;
+  }
 
-footer {
-  padding: 0;
-  margin-top: 100vw;
-  position: fixed;
-  grid-area: footer;
-  background: black;
-width: $width;
+  @media screen and (max-width: 600px) {
+      footer{
+        margin-top: 1125vw;
+        height: $marginheight600;
+      }
 
+    
+  }
 
+@media screen and (min-width: 1200px) {
+  footer {
+    margin-top: 200vw; 
+    height: $marginheight1200;
+  }  
 }
+
+
 }

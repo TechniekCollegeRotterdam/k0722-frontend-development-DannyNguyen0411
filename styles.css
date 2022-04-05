@@ -27,11 +27,16 @@ body {
   width: 100vw;
 }
 
-/*This are color*/
+/*This are the main colors*/
+/*This is for the nav*/
+/*This is for the others*/
+/*This is for the footer*/
 body {
+  /*This is for the main of the body*/
   font-family: sans-serif;
   background-color: #ADD8E6;
   color: #00008b;
+  padding: 0;
   margin: 0;
   display: -ms-grid;
   display: grid;
@@ -45,7 +50,6 @@ body {
 body header,
 body main,
 body footer {
-  padding: 16px;
   text-align: center;
 }
 
@@ -132,14 +136,29 @@ body main {
 }
 
 body footer {
+  display: block;
+  margin-top: 200vw;
   padding: 0;
-  margin-top: 100vw;
-  position: fixed;
+  position: relative;
+  width: 100vw;
+  background: black;
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: footer;
-  background: black;
-  width: 100vw;
+}
+
+@media screen and (max-width: 600px) {
+  body footer {
+    margin-top: 1125vw;
+    height: 125px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body footer {
+    margin-top: 200vw;
+    height: 100px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
