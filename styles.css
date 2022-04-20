@@ -31,9 +31,10 @@ body {
 /*This is for the nav*/
 /*This is for the others*/
 /*This is for the footer*/
+/*This is for the logo*/
 body {
   /*This is for the main of the body*/
-  font-family: sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
   background-color: #ADD8E6;
   color: #00008b;
   padding: 0;
@@ -61,8 +62,9 @@ body header {
 }
 
 body header nav {
-  padding: 10px;
+  padding: 2px;
   position: fixed;
+  opacity: 0.9;
   background-color: #A9A9A9;
   width: 100%;
 }
@@ -133,15 +135,130 @@ body main {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: main;
+  margin: 10%;
+}
+
+body main section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main section .card-container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section .grid-container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section article {
+  display: -ms-grid;
+  display: grid;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+body main section article .card {
+  width: 20vw;
+  height: 60vh;
+  padding: 20px;
+  color: white;
+}
+
+body main section article h1 {
+  margin: 100px;
+  margin-bottom: 0%;
+}
+
+body main section article h2 {
+  margin: 10vh;
+  margin-bottom: 0%;
+  margin-right: 90vw;
+}
+
+body main section article .position {
+  margin-right: 90vw;
+}
+
+body main section article img {
+  max-width: 90%;
+  height: auto;
+}
+
+body main section article img .img-card {
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+}
+
+body main section article .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 2px;
+          column-gap: 2px;
+}
+
+body main section article .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+body main section article .fa:hover {
+  opacity: 0.7;
+}
+
+body main section article .fa-youtube {
+  background: #bb0000;
+  color: #f1f1f1;
+}
+
+body main section article .fa-instagram {
+  background: #00bbff;
+  color: #f1f1f1;
+}
+
+body main section article .fa-facebook {
+  background: #3d02ffc9;
+  color: #f1f1f1;
+}
+
+body main section article .fa-linkedin {
+  background: #007bb5;
+  color: #f1f1f1;
 }
 
 body footer {
   display: block;
-  margin-top: 200vw;
-  padding: 0;
   position: relative;
-  width: 100vw;
-  background: black;
+  background: #9b55a9;
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -150,14 +267,14 @@ body footer {
 
 @media screen and (max-width: 600px) {
   body footer {
-    margin-top: 1125vw;
+    margin-top: 350vh;
     height: 125px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   body footer {
-    margin-top: 200vw;
+    margin-top: 150vw;
     height: 100px;
   }
 }

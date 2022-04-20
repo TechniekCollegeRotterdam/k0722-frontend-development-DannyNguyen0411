@@ -14,6 +14,7 @@ $widthnav: 100%;
 $width: 100vw;
 $text: white;
 $resultcolor: purple;
+$img: 90%; 
 
 /*This is for the footer*/
 $marginfooter: 200vw;
@@ -21,9 +22,12 @@ $marginheight1200: 100px;
 $marginheight600: 125px;
 $widthfooter: 100vw;
 
+/*This is for the logo*/
+$logocolor: #f1f1f1;
+
 body {
 /*This is for the main of the body*/
-  font-family: sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
   background-color: $main;
   color: $sub;
   padding: 0;
@@ -46,9 +50,11 @@ body {
 header {
   grid-area: hd;
 
+  
   nav {
-    padding: 10px;
+    padding: 2px;
     position: fixed;
+    opacity: 0.9;
     background-color: $friend;
     width: $widthnav;
 
@@ -88,6 +94,7 @@ header {
             }
           }
         }
+        
       }
     }
   }
@@ -96,29 +103,130 @@ header {
 
   main {
     grid-area: main;
+    margin: 10%;
 
     section {
+      display: flex;
+
+.card-container{
+  flex-direction: row;
+  justify-content: space-between;
+  }
+  
+  .grid-container{
+    flex-direction: row;
+    justify-content: space-between;
+    }
       
 
       article {
-        
+        display: grid;
+        font-family: 'Nanum Gothic', sans-serif;
+        //This is for the project
+  
+  .card{
+    width: 20vw;
+    height: 60vh;
+    padding: 20px;
+    color: white;
+    }
+    
+
+        h1{
+          margin: 100px;
+          margin-bottom: 0%;
+        }
+
+        h2{
+          margin: 10vh;
+          margin-bottom: 0%;
+          margin-right: 90vw;
+        }
+        .position{
+          margin-right: 90vw;
+        }
+
+        img{
+          max-width: $img;
+          height: auto;
+          .img-card{
+            width: 250px;
+            height: 250px;
+            padding: 20px;
+        }
+        }
+
+
+  
+
+        //This is for the logo's.
+
+        .container{
+          display: flex;        
+          flex-direction: column;  
+          justify-content: center;
+          align-items: center;      
+          column-gap: 2px;
+        }        
+          
+          
+          
+          
+          .fa{         
+            padding: 20px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+          
+          }
+
+          .fa:hover{
+            opacity: 0.7;
+          }
+          
+          
+          
+          .fa-youtube {    
+          background: #bb0000;        
+          color: $logocolor;         
+          }
+          
+          
+          
+          .fa-instagram {       
+          background: #00bbff;         
+          color: $logocolor;         
+          }
+          
+          
+          
+          .fa-facebook {     
+          background: #3d02ffc9;         
+          color: $logocolor; 
+          }
+
+          .fa-linkedin {      
+            background: #007bb5;       
+            color: $logocolor; 
+            }
+      
       }
     }
   }
 
   footer{
     display: block;
-    margin-top: 200vw;
-    padding: 0;
     position: relative;
-    width: $widthfooter;
-    background: black;  
+    background: rgb(155, 85, 169);  
     grid-area: footer;
   }
 
   @media screen and (max-width: 600px) {
       footer{
-        margin-top: 1125vw;
+        margin-top: 350vh;
         height: $marginheight600;
       }
 
@@ -127,7 +235,7 @@ header {
 
 @media screen and (min-width: 1200px) {
   footer {
-    margin-top: 200vw; 
+    margin-top: 150vw; 
     height: $marginheight1200;
   }  
 }

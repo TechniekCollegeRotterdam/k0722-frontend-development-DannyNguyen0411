@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio</title>
     <link rel="stylesheet" href="styles.css">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,10 +17,10 @@
         <nav>
             <img src="images/Toad.jpg" alt="Toad" width="100" height="100">
         <ul class="navigation-list">
-            <li class="navigation-item"><a href="index.html">Home</a></li>
-            <li class="navigation-item"><a href="index.html">About Me</a></li>
-            <li class="navigation-item"><a href="index.html">Project</a></li>
-            <li class="navigation-item"><a href="index.html">Contact</a></li>
+            <li class="navigation-item"><a href="#Home">Home</a></li>
+            <li class="navigation-item"><a href="#About">About Me</a></li>
+            <li class="navigation-item"><a href="#Project">Project</a></li>
+            <li class="navigation-item"><a href="#Contact">Contact</a></li>
         </ul>
     </nav>
     </header>
@@ -25,36 +28,20 @@
 
 
     <main>
-        <section class="grid-container">
+
+        <h1>Home</h1>
+        <section class="grid-container" id="Home">
             <article>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <h1>Home</h1>
                 <img src="images/toad.jpg" alt="een foto" class="logo" width="200" height="200">
                 <p><strong>W</strong>elkom bij mijn website!
                 </p>
             </article>
         </section>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+
 
         <section class="grid-container">
-            <article>
+            <article id="About">
                 <img src="images/toad.jpg" alt="een foto" class="right" width="200" height="200">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Eum necessitatibus excepturi architecto quaerat ipsa doloremque nisi,
@@ -64,19 +51,10 @@
         </section>
 
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
 
+        <h2 class="position">About me</h2>
         <section>
             <article>
-                <h2 class="position">About me</h2>
                 <img src="images/toad.jpg" alt="een foto" class="left" width="200" height="200">
                 <p>Hallo, ik ben Danny Nguyen, ik ben 17 jaar oud en ik doe nu de opleiding Software developer op het Techniek College.<br>
                      Op deze school heb ik geleerd om met html5, css3, php en javascript werken. <br>
@@ -87,72 +65,59 @@
             </article>
         </section>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <br id="Project">
+
 
         <h2>Project</h2>
         <section class="card-container">
-            <article class="card">
-                <p>Op deze school moet ik elke periode een project maken.<br>
-                     Bij project moet je altijd gaan samen werken, want als je niet samenwerkt, kun je het ook geen project noemen.</p>
-
-                     <br>
-                     <br>
-
-                     <p>Dit is mijn eerste project. Ik moest in 6 weken een website bouwen uit html en css.<br>
+            <article class="card">                     
+                <p>Dit is mijn eerste project. Ik moest in 6 weken een website bouwen uit html en css.<br>
                          Ik moet ook de html en css checken of er een error staat. De 3 weken die over zijn gebleven,<br>
                           moeten we een bedrijfswebsite bouwen. We mogen kiezen voor welk bedrijf we de website bouwen.<br>
-                          Voor mijn eerste project heb ik een <strong>8.1</strong> gehaald.</p>
-                    <img src="images/toad.jpg" alt="een foto" class="img-card" width="200" height="200"></p>
+                          Voor mijn eerste project heb ik een <strong>8.1</strong> gehaald.
+                    <img src="images/Project1.png" alt="een foto" class="img-card" width="400" height="250"></p>
+                    <br>
             </article>
             <article class="card">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
-                    In eaque harum eius sapiente dolores quisquam. Unde, deleniti soluta?<br>
-                    Doloremque possimus ratione commodi deleniti labore beatae quasi velit aliquam ducimus quia!
-                    <a href="https://mario.fandom.com/nl/wiki/Toad">
-                        <img src="images/toad.jpg" alt="een foto" class="img-card" width="200" height="200"></p></a>
+                <p>Dit is mijn tweede project. Ik moest hier met php werken, een reviewpage en zoekfunctie maken met werkende php.<br>
+                    We moesten ook met de scrum methode werken
+                    Ik vind het handig om de navbar in html met andere php bestanden te connecten,<br>
+                     want je hoeft niet elke pagina te bekijken of de navbar goed staat. Voor dit project heb ik een <strong>7.9</strong> gehaald.<br>
+                    </p>
+                        <img src="images/Project2.png" alt="een foto" class="img-card" width="400" height="250"></p>
+                        <br>
             </article>
             <article class="card">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
-                    In eaque harum eius sapiente dolores quisquam. Unde, deleniti soluta?<br>
-                    Doloremque possimus ratione commodi deleniti labore beatae quasi velit aliquam ducimus quia!
-                    <img src="images/toad.jpg" alt="een foto" class="img-card" width="200" height="200"></p>
+                <p>Dit is mijn derde project. Hier moest ik de registratiesysteem, login van klant en beheerder en de CRUD methode<br>
+                    werken. Dit moest ook allemaal bij phpmyadmin verwerkt worden.<br>
+                     Voor dit project heb ik een <strong>7.5</strong> gehaald.</p>
+                    <img src="images/Project3.png" alt="een foto" class="img-card" width="400" height="250"></p>
             </article>
         </section>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+   
+        <h2 class="position" id="Contact">Contact</h2>
         <section class="grid-container">
-            <article>
-                <h2 class="position">Contact</h2>
-                <img src="images/toad.jpg" alt="een foto" class="grid-logo2" width="200" height="200">
-                <img src="images/toad.jpg" alt="een foto" class="grid-logo2" width="200" height="200">
-                <img src="images/toad.jpg" alt="een foto" class="grid-logo2" width="200" height="200">
-                <img src="images/toad.jpg" alt="een foto" class="grid-logo2" width="200" height="200">
-            </article>
+                <article class="container">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">           
+                    <a href="mailto://dannyduyanhnguyen@outlook.com"> 
+                     <img src="images/mail.png" alt="mail" width="75" height="75" class="fa fa-instagram">   
+                    </a>                    
+                        <img src="images/phone.png" alt="phone"  class="fa fa-youtube">
+                        <p>06-10348622</p>                   
+                    <a href="https://github.com/DannyNguyen0411">
+                        <img src="images/github.png" alt="github" class="fa fa-facebook">  
+                    </a>
+                    <a href="https://www.linkedin.com/in/danny-nguyen-353249236">
+                        <img src="images/LinkedIn-logo.png" alt="Linkedin" class="fa fa-linkedin">
+                    </a>
+                   </article>
         </section>
 
     </main>
 
     <footer>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit ab rerum maxime eveniet. Facere quis officia
-            omnis impedit quod odio velit fugit, id repellat cumque. Ab sint accusamus deserunt temporibus.</p>
+        <p>@2022 copyright Danny Nguyen</p>
     </footer>
 
 
