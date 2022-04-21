@@ -54,7 +54,7 @@ header {
   nav {
     padding: 2px;
     position: fixed;
-    opacity: 0.9;
+    opacity: 0.94;
     background-color: $friend;
     width: $widthnav;
 
@@ -84,15 +84,6 @@ header {
           color: $sub;
           color: $resultcolor;
           animation-name: colorchange;
-          @keyframes colorchange {
-            from {
-              color: $text;
-            }
-          
-            to {
-              color: $resultcolor;
-            }
-          }
         }
         
       }
@@ -105,31 +96,34 @@ header {
     grid-area: main;
     margin: 10%;
 
+    .flexL-container{
+      flex-direction: row;
+      justify-content: flex-start;
+      }
+
+      
+    .flexR-container{
+      flex-direction: row;
+      justify-content: flex-end;
+      }
+
+
     section {
       display: flex;
-
-.card-container{
-  flex-direction: row;
-  justify-content: space-between;
-  }
   
-  .grid-container{
-    flex-direction: row;
-    justify-content: space-between;
-    }
-      
+
+      .container{
+        display: flex;      
+        flex-direction: row;  
+        justify-content: center;   
+      }  
 
       article {
         display: grid;
         font-family: 'Nanum Gothic', sans-serif;
         //This is for the project
-  
-  .card{
-    width: 20vw;
-    height: 60vh;
-    padding: 20px;
-    color: white;
-    }
+
+
     
 
         h1{
@@ -142,42 +136,47 @@ header {
           margin-bottom: 0%;
           margin-right: 90vw;
         }
-        .position{
-          margin-right: 90vw;
-        }
 
+
+        .img-card{
+          background-color: #00008b;
+          max-width: 70%;
+          max-height: 100%;
+          padding: 20px;
+      }
         img{
+          align-content: left;
           max-width: $img;
           height: auto;
-          .img-card{
-            width: 250px;
-            height: 250px;
-            padding: 20px;
-        }
         }
 
+        .p-left{
+          float: left;
+          margin-right: 100%;
+          flex-direction: row;
+          justify-content: flex-start;
+          }
+
+          
+        .p-right{
+          float: right;
+          margin-right: 100%;
+          flex-direction: row;
+          justify-content: flex-start;
+          }
+  
+        
 
   
 
-        //This is for the logo's.
-
-        .container{
-          display: flex;        
-          flex-direction: column;  
-          justify-content: center;
-          align-items: center;      
-          column-gap: 2px;
-        }        
+        //This is for the logo's.      
           
           
-          
-          
-          .fa{         
-            padding: 20px;
+  
+          .fa{  
+            padding: 20px; 
             font-size: 30px;
             width: 30px;
-            text-align: center;
-            text-decoration: none;
             margin: 5px 2px;
             border-radius: 50%;
           
@@ -191,14 +190,16 @@ header {
           
           .fa-youtube {    
           background: #bb0000;        
-          color: $logocolor;         
+          color: $logocolor;  
+         
           }
           
           
           
           .fa-instagram {       
           background: #00bbff;         
-          color: $logocolor;         
+          color: $logocolor;   
+               
           }
           
           
@@ -206,11 +207,13 @@ header {
           .fa-facebook {     
           background: #3d02ffc9;         
           color: $logocolor; 
+      
           }
 
           .fa-linkedin {      
             background: #007bb5;       
             color: $logocolor; 
+             
             }
       
       }
@@ -220,22 +223,69 @@ header {
   footer{
     display: block;
     position: relative;
-    background: rgb(155, 85, 169);  
+    background: rgb(74, 72, 185);  
     grid-area: footer;
   }
 
-  @media screen and (max-width: 600px) {
-      footer{
-        margin-top: 350vh;
-        height: $marginheight600;
-      }
-
-    
+  .br{
+  margin-top: 15%;
   }
 
+  @media screen and (max-width: 600px) {
+    .br_phone{
+    margin: 15%;
+    }
+
+    .container{
+      margin-left: 75px;
+    }
+
+    .card-container{
+      margin: 100;
+      flex-direction: row;
+      justify-content: space-between;
+      }
+
+    section{
+    .card{
+      max-width: 90%;
+      height: 100vh;
+      padding: 10px;
+      color: white;
+      background-color: #00008b;
+      background-position: 100%;
+      }
+  }
+     footer{
+        margin-top: 600vh;
+        height: $marginheight600;
+        width: 150vw;
+      }
+}
+
 @media screen and (min-width: 1200px) {
+  //This one is for the contact
+  .container{
+    margin-left: 450px;
+  }
+// This is for the project
+  .card-container{
+    flex-direction: row;
+    justify-content: space-between;
+    }
+
+    
+    .card{
+      width: 20vw;
+      height: 60vh;
+      padding: 20px;
+      color: white;
+      background-color: #00008b;
+      }
+
+      //This is for the height of the footer
   footer {
-    margin-top: 150vw; 
+    margin-top: 615vh; 
     height: $marginheight1200;
   }  
 }
