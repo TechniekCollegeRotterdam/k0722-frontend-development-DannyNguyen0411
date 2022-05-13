@@ -27,6 +27,11 @@ $widthfooter: 100vw;
 /*This is for the logo*/
 $logocolor: #f1f1f1;
 
+html {
+  scroll-behavior: smooth;
+   font-size:100%; 
+  }
+  
 body {
 /*This is for the main of the body*/
 font-family: 'Nanum Gothic', sans-serif;
@@ -54,7 +59,7 @@ font-family: 'Nanum Gothic', sans-serif;
   footer {
     text-align: center;
   }
-  html { font-size:100%; }
+
   
 header {
   grid-area: hd;
@@ -74,6 +79,7 @@ header {
     // transform: scale(1, 0);
     // transform-origin: top;
     // transition: transform 400ms ease-in-out;
+
     @keyframes changenav{
       from{background: url(images/ocean.jpg); 
         background-size: cover;}

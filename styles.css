@@ -32,6 +32,11 @@ body {
 /*This is for the others*/
 /*This is for the footer*/
 /*This is for the logo*/
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
 body {
   /*This is for the main of the body*/
   font-family: 'Nanum Gothic', sans-serif;
@@ -72,10 +77,6 @@ body header,
 body main,
 body footer {
   text-align: center;
-}
-
-body html {
-  font-size: 100%;
 }
 
 body header {
