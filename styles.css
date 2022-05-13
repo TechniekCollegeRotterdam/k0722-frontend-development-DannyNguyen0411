@@ -36,6 +36,8 @@ body {
   /*This is for the main of the body*/
   font-family: 'Nanum Gothic', sans-serif;
   background-color: #ADD8E6;
+  -webkit-animation: mrmove 0.5s;
+          animation: mrmove 0.5s;
   color: #00008b;
   padding: 0;
   margin: 0;
@@ -48,10 +50,32 @@ body {
       grid-template-areas: "hd hd" "main main" "footer footer";
 }
 
+@-webkit-keyframes mrmove {
+  from {
+    background: url("images/toad.jpg");
+  }
+  to {
+    background-color: #ADD8E6;
+  }
+}
+
+@keyframes mrmove {
+  from {
+    background: url("images/toad.jpg");
+  }
+  to {
+    background-color: #ADD8E6;
+  }
+}
+
 body header,
 body main,
 body footer {
   text-align: center;
+}
+
+body html {
+  font-size: 100%;
 }
 
 body header {
@@ -62,11 +86,57 @@ body header {
 }
 
 body header nav {
-  padding: 2px;
+  background-color: var(--background);
   position: fixed;
+  -webkit-animation: changenav 3s;
+          animation: changenav 3s;
   opacity: 0.94;
-  background-color: #A9A9A9;
+  background: url(images/ocean.png);
+  background-size: cover;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  left: 0;
   width: 100%;
+}
+
+@-webkit-keyframes changenav {
+  from {
+    background: url(images/ocean.jpg);
+    background-size: cover;
+  }
+  to {
+    background: url(images/ocean.png);
+    background-size: cover;
+  }
+}
+
+@keyframes changenav {
+  from {
+    background: url(images/ocean.jpg);
+    background-size: cover;
+  }
+  to {
+    background: url(images/ocean.png);
+    background-size: cover;
+  }
+}
+
+body header nav nav ul {
+  list-style: none;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+}
+
+body header nav nav li {
+  display: inline-block;
+}
+
+body header nav nav a {
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  padding: .05em;
 }
 
 body header nav ul {
@@ -95,6 +165,8 @@ body header nav ul .navigation-item {
 
 body header nav ul .navigation-item a {
   text-decoration: none;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
   color: white;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -106,8 +178,7 @@ body header nav ul .navigation-item a {
 
 body header nav ul .navigation-item a:hover,
 body header nav ul .navigation-item a:active {
-  color: #00008b;
-  color: purple;
+  color: #ba20ee;
 }
 
 body main {
@@ -275,6 +346,91 @@ body .br {
 }
 
 @media screen and (max-width: 600px) {
+  body .nav-toggle-label {
+    border: solid red;
+  }
+  body .nav-toggle-label span,
+  body .nav-toggle-label span::before,
+  body .nav-toggle-label span::after {
+    background: white;
+  }
+  body .nav-toggle-label {
+    display: none;
+  }
+  body .nav-toggle {
+    display: none;
+  }
+  body .nav-toggle-label {
+    border: solid red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    border: 1px;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .nav-toggle-label span,
+  body .nav-toggle-label span::before,
+  body .nav-toggle-label span::after {
+    display: block;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+    background: white;
+  }
+  body .nav-toggle-label span::before,
+  body .nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+  }
+  body .nav-toggle-label span::before {
+    bottom: 7px;
+  }
+  body .nav-toggle-label span::after {
+    top: 7px;
+  }
+  body .nav-toggle:checked ~ nav {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  body .nav-toggle:checked ~ nav a {
+    opacity: 1;
+    -webkit-transition: opacity 250ms ease-in-out 250ms;
+    transition: opacity 250ms ease-in-out 250ms;
+  }
+  body nav li:hover {
+    background: #444;
+  }
+  body nav li:hover .menu-sub {
+    display: block;
+  }
+  body .menu-sub li {
+    display: block;
+  }
+  body .menu-sub a {
+    padding: 0;
+    margin-bottom: .35em;
+  }
+  body .menu-sub a:hover {
+    text-decoration: underline;
+  }
+  body .menu-category {
+    margin: 2.5em;
+  }
+  body .menu-category:first-of-type {
+    margin-top: 0;
+  }
+  body .menu-col-1 {
+    float: left;
+    width: 25%;
+  }
   body .br_phone {
     margin: 15%;
   }
@@ -313,6 +469,8 @@ body .br {
     margin-left: 50px;
     border-radius: 10px;
     background-color: #ddd;
+    -webkit-animation: fullin 3s;
+            animation: fullin 3s;
   }
   body section .skills {
     text-align: right;
@@ -410,7 +568,7 @@ body .br {
     background-color: #b100fd;
   }
   body footer {
-    margin-top: 425vh;
+    margin-top: 450vh;
     height: 100px;
   }
 }

@@ -3,12 +3,14 @@
 
 /*This are the main colors*/
 
+$sea: #2196F3;
 $friend: #A9A9A9;
 $main: #ADD8E6;
 $sub: #00008b;
 
 /*This is for the nav*/
 $widthnav: 100%;
+$colornav: rgb(186, 32, 238);
 
 /*This is for the others*/
 $width: 100vw;
@@ -29,6 +31,7 @@ body {
 /*This is for the main of the body*/
 font-family: 'Nanum Gothic', sans-serif;
   background-color: $main;
+  animation:mrmove 0.5s;
   color: $sub;
   padding: 0;
   margin: 0;
@@ -40,23 +43,62 @@ font-family: 'Nanum Gothic', sans-serif;
     "main main"
     "footer footer";
     
+    //This is for the animation background
+    @keyframes mrmove{
+      from{background: url("images/toad.jpg");}
+      to{background-color: $main;}
+    }
 
   header,
   main,
   footer {
     text-align: center;
   }
-
+  html { font-size:100%; }
+  
 header {
   grid-area: hd;
 
   
   nav {
-    padding: 2px;
+    background-color: var(--background);
     position: fixed;
+    animation: changenav 3s;
+    // text-align: left;
     opacity: 0.94;
-    background-color: $friend;
+    background: url(images/ocean.png);
+    background-size: cover;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,.10);
+    left: 0;
     width: $widthnav;
+    // transform: scale(1, 0);
+    // transform-origin: top;
+    // transition: transform 400ms ease-in-out;
+    @keyframes changenav{
+      from{background: url(images/ocean.jpg); 
+        background-size: cover;}
+      to{background: url(images/ocean.png);
+        background-size: cover;}
+    }
+
+
+    nav ul{
+      list-style: none;
+      position: relative;
+      display: grid;
+    }
+    
+    nav li{
+      display: inline-block;
+    }
+    
+    nav a{
+      text-decoration: none;
+      display: block;
+      color: #fff;
+      padding: .05em;
+    }
+    
 
     ul {
       margin: 0;
@@ -73,6 +115,7 @@ header {
 
         a {
           text-decoration: none;
+          animation-duration: 3s;
           color: $text;
           justify-content: space-between;
           align-items: center;
@@ -81,10 +124,10 @@ header {
 
         a:hover,
         a:active {
-          color: $sub;
-          color: $resultcolor;
+          color: $colornav;
         }
-        
+         
+
       }
     }
   }
@@ -249,6 +292,109 @@ header {
 
   @media screen and (max-width: 600px) {
 
+    //This is for the responsive navbar
+ 
+
+  
+    .nav-toggle-label {
+      border: solid red
+    }
+    
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      background: white;
+    }
+  
+    .nav-toggle-label {
+      display: none;
+    }
+  
+    .nav-toggle {
+      display: none;
+    }
+    
+    .nav-toggle-label {
+      border: solid red;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: 1em;
+      border: 1px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      display: block;
+      height: 2px;
+      width: 2em;
+      border-radius: 2px;
+      position: relative;
+      background: white;
+    }
+    
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      content:'';
+      position: absolute;
+    }
+    
+    .nav-toggle-label span::before {
+      bottom: 7px;
+    }
+    
+    .nav-toggle-label span::after {
+      top: 7px;
+    }
+    
+    .nav-toggle:checked ~ nav {
+      transform: scale(1,1);
+     }
+     
+     .nav-toggle:checked ~ nav a {
+       opacity: 1;
+       transition: opacity 250ms ease-in-out 250ms;
+     }
+     
+     nav li:hover {
+      background: #444;
+      }
+    
+    nav li:hover .menu-sub {
+      display: block;
+    }
+  
+    
+  .menu-sub li {
+    display: block;
+  }
+  
+  .menu-sub a {
+    padding: 0;
+    margin-bottom: .35em;
+  }
+  
+  .menu-sub a:hover {
+    text-decoration: underline;
+  }
+  
+  .menu-category {
+    margin: 2.5em;
+  }
+  
+  .menu-category:first-of-type {
+    margin-top: 0;
+  }
+  
+  .menu-col-1 {
+   float: left;
+   width: 25%;
+  }
+
    //this is for the break
     .br_phone{
     margin: 15%;
@@ -290,7 +436,9 @@ header {
       margin-left: 50px;
       border-radius: 10px;
       background-color: #ddd;
+      animation: fullin 3s;
     }
+    
     
     .skills{
       text-align: right;
@@ -367,10 +515,15 @@ header {
 
       //This is for the height of the footer
   footer {
-    margin-top: 425vh; 
+    margin-top: 450vh; 
     height: $marginheight1200;
   }  
-}
 
 
 }
+}
+
+
+
+
+
