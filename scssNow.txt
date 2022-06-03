@@ -35,6 +35,7 @@ html {
 body {
 /*This is for the main of the body*/
 font-family: 'Nanum Gothic', sans-serif;
+font-weight: 400;
   background-color: $main;
   animation:mrmove 0.5s;
   color: $sub;
@@ -63,18 +64,25 @@ font-family: 'Nanum Gothic', sans-serif;
   
 header {
   grid-area: hd;
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
 
   
   nav {
     background-color: var(--background);
-    position: fixed;
+    position: absolute;
     animation: changenav 3s;
-    // text-align: left;
+    text-align: left;
+    top: 100%;
+    left: 0;
     opacity: 0.94;
     background: url(images/ocean.png);
     background-size: cover;
     box-shadow: 0 0 15px 0 rgba(0,0,0,.10);
-    left: 0;
     width: $widthnav;
     // transform: scale(1, 0);
     // transform-origin: top;
@@ -89,6 +97,8 @@ header {
 
 
     nav ul{
+      margin: 0;
+      padding: 0;
       list-style: none;
       position: relative;
       display: grid;
@@ -299,107 +309,7 @@ header {
   @media screen and (max-width: 600px) {
 
     //This is for the responsive navbar
- 
 
-  
-    .nav-toggle-label {
-      border: solid red
-    }
-    
-    .nav-toggle-label span,
-    .nav-toggle-label span::before,
-    .nav-toggle-label span::after {
-      background: white;
-    }
-  
-    .nav-toggle-label {
-      display: none;
-    }
-  
-    .nav-toggle {
-      display: none;
-    }
-    
-    .nav-toggle-label {
-      border: solid red;
-      position: absolute;
-      top: 0;
-      left: 0;
-      margin-left: 1em;
-      border: 1px;
-      height: 100%;
-      display: flex;
-      align-items: center;
-    }
-    
-    .nav-toggle-label span,
-    .nav-toggle-label span::before,
-    .nav-toggle-label span::after {
-      display: block;
-      height: 2px;
-      width: 2em;
-      border-radius: 2px;
-      position: relative;
-      background: white;
-    }
-    
-    .nav-toggle-label span::before,
-    .nav-toggle-label span::after {
-      content:'';
-      position: absolute;
-    }
-    
-    .nav-toggle-label span::before {
-      bottom: 7px;
-    }
-    
-    .nav-toggle-label span::after {
-      top: 7px;
-    }
-    
-    .nav-toggle:checked ~ nav {
-      transform: scale(1,1);
-     }
-     
-     .nav-toggle:checked ~ nav a {
-       opacity: 1;
-       transition: opacity 250ms ease-in-out 250ms;
-     }
-     
-     nav li:hover {
-      background: #444;
-      }
-    
-    nav li:hover .menu-sub {
-      display: block;
-    }
-  
-    
-  .menu-sub li {
-    display: block;
-  }
-  
-  .menu-sub a {
-    padding: 0;
-    margin-bottom: .35em;
-  }
-  
-  .menu-sub a:hover {
-    text-decoration: underline;
-  }
-  
-  .menu-category {
-    margin: 2.5em;
-  }
-  
-  .menu-category:first-of-type {
-    margin-top: 0;
-  }
-  
-  .menu-col-1 {
-   float: left;
-   width: 25%;
-  }
 
    //this is for the break
     .br_phone{
@@ -527,6 +437,60 @@ header {
 
 
 }
+
+
+//navigation for responsive bar
+:root {
+  --background: rgba(0, 214, 170, .85);
+}
+
+// *, *::before, *::after {
+//   box-sizing: border-box;
+// } 
+
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 3px solid rgba(lightblue, .75);
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
 }
 
 
